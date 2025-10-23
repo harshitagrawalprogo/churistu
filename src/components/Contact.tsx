@@ -20,14 +20,14 @@ const Contact = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
+            entry.target.classList.add("animate-fade-in-up");
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll('.fade-on-scroll');
+    const elements = sectionRef.current?.querySelectorAll(".fade-on-scroll");
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -35,7 +35,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -69,14 +69,19 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="fade-on-scroll opacity-0 glass-effect border-primary/20" style={{ animationDelay: '0.2s' }}>
+          <Card
+            className="fade-on-scroll opacity-0 glass-effect border-primary/20"
+            style={{ animationDelay: "0.2s" }}
+          >
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
                     placeholder="Your Name"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     className="bg-secondary border-border"
                   />
                 </div>
@@ -85,7 +90,9 @@ const Contact = () => {
                     type="email"
                     placeholder="Your Email"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="bg-secondary border-border"
                   />
                 </div>
@@ -94,13 +101,15 @@ const Contact = () => {
                     placeholder="Your Message"
                     rows={6}
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     className="bg-secondary border-border"
                   />
                 </div>
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Send Message
@@ -113,14 +122,19 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info */}
-          <div className="space-y-8 fade-on-scroll opacity-0" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="space-y-8 fade-on-scroll opacity-0"
+            style={{ animationDelay: "0.4s" }}
+          >
             <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Address</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">
+                    Address
+                  </h3>
                   <p className="text-muted-foreground">
                     N1/12 P-1 Gangotri Vihar Colony, Nagwa Lanka, Varanasi
                   </p>
@@ -134,9 +148,11 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Email</h3>
-                  <a 
-                    href="mailto:churistu.mgm.ptv.ltd@gmail.com" 
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">
+                    Email
+                  </h3>
+                  <a
+                    href="mailto:churistu.mgm.ptv.ltd@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     churistu.mgm.ptv.ltd@gmail.com
@@ -151,9 +167,11 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Phone</h3>
-                  <a 
-                    href="tel:+919129958671" 
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">
+                    Phone
+                  </h3>
+                  <a
+                    href="tel:+919129958671"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     +91 91299 58671
@@ -168,7 +186,9 @@ const Contact = () => {
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Website</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">
+                    Website
+                  </h3>
                   <p className="text-muted-foreground">www.churistu.com</p>
                 </div>
               </CardContent>

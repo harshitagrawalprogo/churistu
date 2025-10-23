@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 const Philosophy = () => {
   const [text, setText] = useState("");
-  const fullText = "Innovation meets Execution — Together, let's build the future one innovation at a time.";
+  const fullText =
+    "Innovation meets Execution — Together, let's build the future one innovation at a time.";
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -37,10 +38,7 @@ const Philosophy = () => {
   }, [hasAnimated]);
 
   return (
-    <section 
-      ref={sectionRef}
-      className="py-32 px-4 relative overflow-hidden"
-    >
+    <section ref={sectionRef} className="py-32 px-4 relative overflow-hidden">
       <div className="absolute inset-0 gradient-bg opacity-30" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center">

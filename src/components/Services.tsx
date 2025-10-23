@@ -1,5 +1,12 @@
 import { useEffect, useRef } from "react";
-import { Globe, Smartphone, Settings, Palette, Lightbulb, TrendingUp } from "lucide-react";
+import {
+  Globe,
+  Smartphone,
+  Settings,
+  Palette,
+  Lightbulb,
+  TrendingUp,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -26,7 +33,8 @@ const services = [
   {
     icon: Lightbulb,
     title: "IT Consultation",
-    description: "Expert guidance in digital transformation & system integration.",
+    description:
+      "Expert guidance in digital transformation & system integration.",
   },
   {
     icon: TrendingUp,
@@ -43,14 +51,14 @@ const Services = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
+            entry.target.classList.add("animate-fade-in-up");
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll('.fade-on-scroll');
+    const elements = sectionRef.current?.querySelectorAll(".fade-on-scroll");
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();

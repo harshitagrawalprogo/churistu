@@ -36,7 +36,7 @@ const Team = () => {
       </div>
 
       {/* Marquee with cards */}
-      <marquee behavior="scroll" direction="left" scrollamount="5">
+      <marquee behavior="scroll" direction="left" scrollamount="10">
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
           {teamMembers.map((member, index) => (
             <div
