@@ -16,6 +16,11 @@ const services = [
     description: "Elegant, scalable, and user-centric experiences.",
   },
   {
+    icon: Globe,
+    title: "Website Development",
+    description: "Elegant, scalable, and user-centric experiences.",
+  },
+  {
     icon: Smartphone,
     title: "Mobile App Development",
     description: "High-performance Android & iOS apps.",
@@ -55,7 +60,7 @@ const Services = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const elements = sectionRef.current?.querySelectorAll(".fade-on-scroll");
