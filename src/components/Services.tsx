@@ -21,6 +21,11 @@ const services = [
     description: "Elegant, scalable, and user-centric experiences.",
   },
   {
+    icon: Globe,
+    title: "Website Development",
+    description: "Elegant, scalable, and user-centric experiences.",
+  },
+  {
     icon: Smartphone,
     title: "Mobile App Development",
     description: "High-performance Android & iOS apps.",
